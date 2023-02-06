@@ -4,19 +4,33 @@ import java.util.*;
 
 public class Lesson_5 {
     public static void main(String[] args) {
-        ex01();
+//        ex01();
+//        ex02();
+//        ex03();
+//        ex04();
+        ex05();
+        ex06();
 
 
     }
 
     static void ex01() {
         Map<Integer, String> db = new HashMap<>();
-        db.putIfAbsent(1, "один");
+        db.putIfAbsent(1, "один"); // проверить, и добавить
         db.put(2, "два");
         db.put(null, "!null");
+        System.out.println(db.putIfAbsent(2, "четыре"));
         System.out.println(db); // {null=!null, 1=один, 2=два}
+        db.replace(2, "четрые");
+        System.out.println(db);
+        System.out.println(db.isEmpty());
+        System.out.println(db.values());
+        System.out.println(db.get(1));
+        System.out.println(db);
+        System.out.println(db);
+
         System.out.println(db.get(44));
-        //db.remove(null);
+        db.remove(null);
         System.out.println(db); // {1=один, 2=два}
         System.out.println(db.containsValue("один")); // true
         System.out.println(db.containsValue(1)); // false
@@ -34,7 +48,7 @@ public class Lesson_5 {
         System.out.println(db);
 
         for (var item : db.entrySet()) {
-            System.out.printf("[%d: %s]\n", item.getKey(), item.getValue());
+            System.out.printf("Итерация: [%d: %s]\n", item.getKey(), item.getValue());
         }
     }
 
