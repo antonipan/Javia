@@ -42,6 +42,9 @@ public class Homework_7 {
         Map <Integer, Integer> filter = new HashMap<>();
         Scanner console = new Scanner(System.in);
         System.out.println("Введите ваш любимый цвет из перечня. ");
+        System.out.println("Если вы напишите любое сочетание букв, " +
+                "\nто мы  выдадим все цвета");
+
         System.out.println(Arrays.toString(colors));
         String color = console.nextLine();
         for (int i = 0; i < colors.length; i++) {
